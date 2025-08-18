@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class FavoriteView extends StatelessWidget {
+  const FavoriteView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.green,
+      // backgroundColor: Colors.red,
       body: Center(
         child: Text(
-          "Home View",
+          "Favorite View",
           style: Theme.of(context).textTheme.headlineMedium?.copyWith(
             color: Colors.white, // لون يبان فوق الخلفية الصفراء
             fontWeight: FontWeight.bold,
