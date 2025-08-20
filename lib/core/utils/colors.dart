@@ -15,3 +15,4 @@ const kDarkDescriptionColor = Color(0xFFBDBDBD); // وصف رمادي فاتح
 const kDarkIconColor = Color(0xFF9E9E9E); // أيقونات رمادي
 
 const kUnSelectedIcon = Color(0xff8694A6);
+const kUnActiveIndecator = Color(0xffD2E0FF);

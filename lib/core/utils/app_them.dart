@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:student_house/core/utils/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   // ✅ Light Theme
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    primaryColor: kLightPrimaryColor, // هنا تستخدم اللون الأساسي
+    primaryColor: kLightPrimaryColor,
     scaffoldBackgroundColor: kLightBackgroundScaffoldColor,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
@@ -18,9 +19,11 @@ class AppTheme {
       foregroundColor: kLightTextColor,
       elevation: 0,
     ),
-    textTheme: TextTheme(
-      bodyLarge: TextStyle(color: kLightTextColor),
-      bodyMedium: TextStyle(color: kLightDescriptionColor),
+    textTheme: GoogleFonts.poppinsTextTheme(
+      const TextTheme(
+        bodyLarge: TextStyle(color: kLightTextColor),
+        bodyMedium: TextStyle(color: kLightDescriptionColor),
+      ),
     ),
   );
 
@@ -40,9 +43,11 @@ class AppTheme {
       foregroundColor: kDarkTextColor,
       elevation: 0,
     ),
-    textTheme: TextTheme(
-      bodyLarge: TextStyle(color: kDarkTextColor),
-      bodyMedium: TextStyle(color: kDarkDescriptionColor),
+    textTheme: GoogleFonts.poppinsTextTheme(
+      const TextTheme(
+        bodyLarge: TextStyle(color: kDarkTextColor),
+        bodyMedium: TextStyle(color: kDarkDescriptionColor),
+      ),
     ),
   );
 }
