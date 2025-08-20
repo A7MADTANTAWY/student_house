@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_house/core/utils/colors.dart';
 import 'package:student_house/features/favorite/presentation/views/favorite_view.dart';
 import 'package:student_house/features/settings/presentation/views/settings_view.dart';
 import '../../features/home/presentation/views/home_view.dart';
@@ -36,8 +37,8 @@ class _RouteViewState extends State<RouteView> {
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
         elevation: 0,
-        selectedItemColor: Colors.blueAccent,
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: kLightPrimaryColor,
+        unselectedItemColor: kUnSelectedIcon,
         selectedFontSize: 12,
         unselectedFontSize: 10,
         showUnselectedLabels: true,

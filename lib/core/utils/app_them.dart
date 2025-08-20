@@ -1,46 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:student_house/core/utils/colors.dart';
 
 class AppTheme {
   // ✅ Light Theme
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    primarySwatch: Colors.blue,
-    scaffoldBackgroundColor: Colors.white,
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    primaryColor: kLightPrimaryColor, // هنا تستخدم اللون الأساسي
+    scaffoldBackgroundColor: kLightBackgroundScaffoldColor,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
-      selectedItemColor: Colors.blueAccent,
+      selectedItemColor: kLightPrimaryColor,
       unselectedItemColor: Colors.grey,
+      backgroundColor: kLightBackgroundScaffoldColor,
     ),
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.white,
-      foregroundColor: Colors.black,
+    appBarTheme: AppBarTheme(
+      backgroundColor: kLightBackgroundScaffoldColor,
+      foregroundColor: kLightTextColor,
       elevation: 0,
     ),
-    textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: Colors.black),
-      bodyMedium: TextStyle(color: Colors.black87),
+    textTheme: TextTheme(
+      bodyLarge: TextStyle(color: kLightTextColor),
+      bodyMedium: TextStyle(color: kLightDescriptionColor),
     ),
   );
 
   // ✅ Dark Theme
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
-    primarySwatch: Colors.blue,
-    scaffoldBackgroundColor: Colors.black,
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    primaryColor: kDarkPrimaryColor,
+    scaffoldBackgroundColor: kDarkBackgroundScaffoldColor,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
       type: BottomNavigationBarType.fixed,
-      selectedItemColor: Colors.blueAccent,
+      selectedItemColor: kDarkPrimaryColor,
       unselectedItemColor: Colors.grey,
-      backgroundColor: Colors.black,
+      backgroundColor: kDarkBackgroundScaffoldColor,
     ),
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.black,
-      foregroundColor: Colors.white,
+    appBarTheme: AppBarTheme(
+      backgroundColor: kDarkBackgroundScaffoldColor,
+      foregroundColor: kDarkTextColor,
       elevation: 0,
     ),
-    textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: Colors.white),
-      bodyMedium: TextStyle(color: Colors.white70),
+    textTheme: TextTheme(
+      bodyLarge: TextStyle(color: kDarkTextColor),
+      bodyMedium: TextStyle(color: kDarkDescriptionColor),
     ),
   );
 }
