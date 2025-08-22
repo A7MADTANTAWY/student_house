@@ -13,4 +13,6 @@ class Images {
 
   static const String getStarted = "assets/image/Group 1436.png";
   static const String logo = "assets/svg/logo.svg";
+  static const String testImage = "assets/image/test1.jpeg";
+  static const String profileImage = "assets/image/person.jpeg";
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:student_house/features/home/presentation/views/widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -7,16 +8,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.green,
-      body: Center(
-        child: Text(
-          "Home View",
-          style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-            color: Colors.white, // لون يبان فوق الخلفية الصفراء
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.2,
-          ),
-        ),
-      ),
+      body: const HomeViewBody(),
     );
   }
 }

@@ -56,7 +56,7 @@ class _RouteViewState extends State<RouteView> {
             label: "Settings",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite, size: 24),
+            icon: Icon(Icons.bookmark_border, size: 24),
             label: "Favorites",
           ),
         ],

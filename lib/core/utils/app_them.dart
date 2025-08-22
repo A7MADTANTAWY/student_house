@@ -25,6 +25,14 @@ class AppTheme {
         bodyMedium: TextStyle(color: kLightDescriptionColor),
       ),
     ),
+    extensions: const [
+      ContainerTheme(
+        backgroundColor: Colors.white,
+        boxShadow: [
+          BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 3)),
+        ],
+      ),
+    ],
   );
 
   // ✅ Dark Theme
@@ -49,5 +57,44 @@ class AppTheme {
         bodyMedium: TextStyle(color: kDarkDescriptionColor),
       ),
     ),
+    extensions: const [
+      ContainerTheme(
+        backgroundColor: kDarkContainerColor,
+        boxShadow: [
+          BoxShadow(color: Colors.black54, blurRadius: 6, offset: Offset(0, 3)),
+        ],
+      ),
+    ],
   );
+}
+
+// ✅ ThemeExtension علشان أخصص الـ Container
+class ContainerTheme extends ThemeExtension<ContainerTheme> {
+  final Color backgroundColor;
+  final List<BoxShadow> boxShadow;
+
+  const ContainerTheme({
+    required this.backgroundColor,
+    required this.boxShadow,
+  });
+
+  @override
+  ContainerTheme copyWith({
+    Color? backgroundColor,
+    List<BoxShadow>? boxShadow,
+  }) {
+    return ContainerTheme(
+      backgroundColor: backgroundColor ?? this.backgroundColor,
+      boxShadow: boxShadow ?? this.boxShadow,
+    );
+  }
+
+  @override
+  ContainerTheme lerp(ThemeExtension<ContainerTheme>? other, double t) {
+    if (other is! ContainerTheme) return this;
+    return ContainerTheme(
+      backgroundColor: Color.lerp(backgroundColor, other.backgroundColor, t)!,
+      boxShadow: boxShadow,
+    );
+  }
 }
